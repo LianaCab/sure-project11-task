@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ambiguity-Aware VQA</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Ambiguity-Aware Visual Question Answering</h1>
+
+<form id="vqa-form">
+  <label for="image">Upload Image:</label>
+  <input type="file" id="image" name="image" required aria-label="Upload image">
+
+  <label for="question">Your Question:</label>
+  <input type="text" id="question" name="question" required aria-label="Question about image">
+
+  <label for="mode">Interaction Mode:</label>
+  <select id="mode" name="mode">
+    <option value="onepass">Respond in One Pass</option>
+    <option value="iterative">Clarify Iteratively</option>
+  </select>
+
+  <button type="submit">Submit</button>
+</form>
+
+<div id="output" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
